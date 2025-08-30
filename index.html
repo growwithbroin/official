@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grow With Bro — Come with your idea, exit with your startup.</title>
+  <meta name="description" content="Grow With Bro helps young entrepreneurs launch faster with brotherhood support — idea to launch: validation, branding, website, pitch & growth." />
+
+  <!-- Tailwind via CDN for fast styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind theme tweak
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              300: '#a5b4fc',
+              400: '#818cf8',
+              500: '#6366f1', // primary
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+            },
+            neon: '#22d3ee'
+          },
+          boxShadow: {
+            glow: '0 0 40px rgba(99,102,241,0.35)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: dark light; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
+    /* Simple gradient star field */
+    .space-bg {
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(99,102,241,.25), transparent 60%),
+                  radial-gradient(1000px 600px at -10% 10%, rgba(34,211,238,.15), transparent 60%),
+                  linear-gradient(180deg, #0b1020 0%, #0a0c18 60%, #0b0f1e 100%);
+    }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); }
+  </style>
+</head>
+<body class="space-bg text-white selection:bg-brand-400/40">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-black/40 backdrop-blur supports-[backdrop-filter]:glass">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3 group">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-brand-500 shadow-glow ring-1 ring-white/10">
+          <!-- simple spark icon -->
+          <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5"><path d="M12 2v6M12 16v6M4 12h6M14 12h6M6.5 6.5l4 4m3 3 4 4m-11 0 4-4m3-3 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </span>
+        <div>
+          <p class="text-lg font-bold leading-5">Grow With Bro</p>
+          <p class="text-xs text-white/60">Brotherhood for Builders</p>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-white/80">
+        <a href="#services" class="hover:text-white">Services</a>
+        <a href="#process" class="hover:text-white">Process</a>
+        <a href="#testimonials" class="hover:text-white">Proof</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+        <a href="#cta" class="px-4 py-2 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold shadow-glow">Start Now</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl px-3 py-2 ring-1 ring-white/10">
+        <span class="sr-only">Open menu</span>
+        <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div id="mobileNav" class="hidden md:hidden border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-4 py-3 grid gap-3 text-sm">
+        <a href="#services" class="hover:text-white">Services</a>
+        <a href="#process" class="hover:text-white">Process</a>
+        <a href="#testimonials" class="hover:text-white">Proof</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+        <a href="#cta" class="px-4 py-2 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold w-max">Start Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-black leading-tight">
+          Come with your idea, <span class="text-brand-400">exit with your startup.</span>
+        </h1>
+        <p class="mt-5 text-white/80 text-lg md:text-xl max-w-xl">We help 15–30 age founders validate, brand, build and launch — fast. Guidance, community, and execution under one roof.</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#cta" class="px-6 py-3 rounded-2xl bg-brand-500 hover:bg-brand-600 font-semibold shadow-glow">Start for Free</a>
+          <a href="#services" class="px-6 py-3 rounded-2xl ring-1 ring-white/15 hover:bg-white/5">See Services</a>
+        </div>
+        <div class="mt-8 flex items-center gap-4 text-sm text-white/70">
+          <div class="flex -space-x-2">
+            <img alt="avatar" class="h-8 w-8 rounded-full ring-2 ring-black/50" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=128&auto=format&fit=crop"/>
+            <img alt="avatar" class="h-8 w-8 rounded-full ring-2 ring-black/50" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=128&auto=format&fit=crop"/>
+            <img alt="avatar" class="h-8 w-8 rounded-full ring-2 ring-black/50" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=128&auto=format&fit=crop"/>
+          </div>
+          <span>100+ founders guided • 4.9★ avg love</span>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="relative aspect-[4/3] rounded-3xl glass p-3 shadow-glow ring-1 ring-white/10">
+          <div class="h-full w-full rounded-2xl bg-gradient-to-br from-brand-500/20 to-neon/10 grid place-items-center">
+            <div class="text-center p-6">
+              <p class="text-sm uppercase tracking-widest text-white/60">Vision Snapshot</p>
+              <h3 class="text-2xl md:text-3xl font-bold mt-2">Idea → Validation → Brand → Website → Launch</h3>
+              <p class="mt-3 text-white/70">Brotherhood support + expert freelancers + clear roadmap.</p>
+              <div class="mt-6 grid grid-cols-3 gap-3 text-xs">
+                <div class="rounded-xl bg-black/30 p-3 ring-1 ring-white/10">Validation</div>
+                <div class="rounded-xl bg-black/30 p-3 ring-1 ring-white/10">Branding</div>
+                <div class="rounded-xl bg-black/30 p-3 ring-1 ring-white/10">Website</div>
+                <div class="rounded-xl bg-black/30 p-3 ring-1 ring-white/10">Content</div>
+                <div class="rounded-xl bg-black/30 p-3 ring-1 ring-white/10">Pitch</div>
+                <div class="rounded-xl bg-black/30 p-3 ring-1 ring-white/10">Growth</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-20">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold">Services that ship.</h2>
+          <p class="text-white/70 mt-2 max-w-2xl">Clear deliverables, founder-friendly pricing. Start small, scale when ready.</p>
+        </div>
+        <a href="#contact" class="hidden md:inline-flex px-4 py-2 rounded-xl ring-1 ring-white/15 hover:bg-white/5">Ask a custom plan</a>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="glass rounded-3xl p-6 ring-1 ring-white/10 hover:shadow-glow transition">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-500/20 ring-1 ring-white/10">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none"><path d="M12 3v18M3 12h18" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="text-xl font-bold">Idea Validation</h3>
+          </div>
+          <p class="mt-3 text-white/70">Market check, problem-solution fit, competitor scan, first 10-user interviews.</p>
+          <ul class="mt-4 space-y-2 text-sm text-white/75 list-disc list-inside">
+            <li>1-page Validation Report</li>
+            <li>Top 3 positioning angles</li>
+            <li>MVP recommendation</li>
+          </ul>
+        </article>
+        <!-- Card 2 -->
+        <article class="glass rounded-3xl p-6 ring-1 ring-white/10 hover:shadow-glow transition">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-500/20 ring-1 ring-white/10">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none"><path d="M4 12l4 4 12-12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3 class="text-xl font-bold">Brand & Identity</h3>
+          </div>
+          <p class="mt-3 text-white/70">Logo, color system, fonts, tone — ready to use in social + pitch.</p>
+          <ul class="mt-4 space-y-2 text-sm text-white/75 list-disc list-inside">
+            <li>Mini brand kit</li>
+            <li>Social templates (5)</li>
+            <li>Pitch one-pager</li>
+          </ul>
+        </article>
+        <!-- Card 3 -->
+        <article class="glass rounded-3xl p-6 ring-1 ring-white/10 hover:shadow-glow transition">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-500/20 ring-1 ring-white/10">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none"><path d="M4 6h16M4 12h12M4 18h8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="text-xl font-bold">Website Starter</h3>
+          </div>
+          <p class="mt-3 text-white/70">Fast, modern landing page with contact form. Edit-friendly.</p>
+          <ul class="mt-4 space-y-2 text-sm text-white/75 list-disc list-inside">
+            <li>1–3 sections</li>
+            <li>Mobile-first & SEO basics</li>
+            <li>Launch in 72 hours</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="py-20">
+    <div class="mx-auto max-w-7xl px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold">Simple process, real outcomes.</h2>
+      <div class="mt-10 grid md:grid-cols-4 gap-6">
+        <!-- Step 1 -->
+        <div class="glass rounded-3xl p-6 ring-1 ring-white/10">
+          <p class="text-sm text-white/60">Step 1</p>
+          <h3 class="text-xl font-bold mt-1">Share Idea</h3>
+          <p class="text-white/70 mt-2">Fill a quick form or DM us. We listen.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="glass rounded-3xl p-6 ring-1 ring-white/10">
+          <p class="text-sm text-white/60">Step 2</p>
+          <h3 class="text-xl font-bold mt-1">Validate & Plan</h3>
+          <p class="text-white/70 mt-2">Clarity doc + MVP scope in 48 hrs.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="glass rounded-3xl p-6 ring-1 ring-white/10">
+          <p class="text-sm text-white/60">Step 3</p>
+          <h3 class="text-xl font-bold mt-1">Build</h3>
+          <p class="text-white/70 mt-2">Brand + landing + first content.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="glass rounded-3xl p-6 ring-1 ring-white/10">
+          <p class="text-sm text-white/60">Step 4</p>
+          <h3 class="text-xl font-bold mt-1">Launch & Iterate</h3>
+          <p class="text-white/70 mt-2">Feedback → improve → grow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS / SOCIAL PROOF -->
+  <section id="testimonials" class="py-20">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="md:flex md:items-end md:justify-between">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Founders we’ve helped.</h2>
+        <p class="text-white/70 mt-2 md:mt-0">Real feedback. Real progress.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <figure class="glass rounded-3xl p-6 ring-1 ring-white/10">
+          <blockquote class="text-white/80">“Clear steps + fast delivery. I launched in days, not months.”</blockquote>
+          <figcaption class="mt-4 text-sm text-white/60">— Aarti, Student Founder</figcaption>
+        </figure>
+        <figure class="glass rounded-3xl p-6 ring-1 ring-white/10">
+          <blockquote class="text-white/80">“Loved the brand kit and landing page. Great for early traction.”</blockquote>
+          <figcaption class="mt-4 text-sm text-white/60">— Rahul, Solo Builder</figcaption>
+        </figure>
+        <figure class="glass rounded-3xl p-6 ring-1 ring-white/10">
+          <blockquote class="text-white/80">“Brotherhood vibe is real. Guidance + execution in one place.”</blockquote>
+          <figcaption class="mt-4 text-sm text-white/60">— Sana, Community Lead</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SPLASH -->
+  <section id="cta" class="py-20">
+    <div class="mx-auto max-w-5xl px-4">
+      <div class="rounded-3xl glass ring-1 ring-white/10 p-8 md:p-12 text-center shadow-glow">
+        <h3 class="text-2xl md:text-3xl font-extrabold">Ready to turn your idea into a startup?</h3>
+        <p class="mt-3 text-white/70 max-w-2xl mx-auto">Join the Grow With Bro tribe. Submit your idea, get a 1-page validation & a launch plan — free.</p>
+        <a href="#contact" class="mt-6 inline-flex px-6 py-3 rounded-2xl bg-brand-500 hover:bg-brand-600 font-semibold shadow-glow">Get My Free Plan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold">Contact us</h2>
+          <p class="text-white/70 mt-3">Fill the form and we’ll reply within 24 hours. Or email <span class="underline">growwithbro.in@gmail.com</span>.</p>
+          <ul class="mt-6 space-y-3 text-white/75">
+            <li class="flex items-center gap-3"><span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-brand-500/20 ring-1 ring-white/10">📍</span> India • Remote</li>
+            <li class="flex items-center gap-3"><span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-brand-500/20 ring-1 ring-white/10">⏱️</span> 10am – 7pm IST</li>
+            <li class="flex items-center gap-3"><span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-brand-500/20 ring-1 ring-white/10">🛡️</span> We respect your privacy</li>
+          </ul>
+        </div>
+        <form id="contactForm" class="glass rounded-3xl p-6 ring-1 ring-white/10 space-y-4">
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="block text-sm">Name
+              <input required type="text" name="name" class="mt-1 w-full rounded-xl bg-black/30 ring-1 ring-white/10 p-3 focus:outline-none focus:ring-brand-400" placeholder="Your full name" />
+            </label>
+            <label class="block text-sm">Email
+              <input required type="email" name="email" class="mt-1 w-full rounded-xl bg-black/30 ring-1 ring-white/10 p-3 focus:outline-none focus:ring-brand-400" placeholder="you@example.com" />
+            </label>
+          </div>
+          <label class="block text-sm">Your Idea / Need
+            <textarea required name="message" rows="5" class="mt-1 w-full rounded-xl bg-black/30 ring-1 ring-white/10 p-3 focus:outline-none focus:ring-brand-400" placeholder="Tell us about your startup idea or what you need"></textarea>
+          </label>
+          <button class="w-full md:w-auto px-6 py-3 rounded-2xl bg-brand-500 hover:bg-brand-600 font-semibold shadow-glow">Send</button>
+          <p id="formStatus" class="text-sm text-white/70"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-10">
+    <div class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-white/60 text-sm">© <span id="year"></span> Grow With Bro. All rights reserved.</p>
+      <nav class="flex items-center gap-6 text-sm text-white/70">
+        <a href="#services" class="hover:text-white">Services</a>
+        <a href="#process" class="hover:text-white">Process</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact form: compose a mailto so it works on static hosting without backend
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('formStatus');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = encodeURIComponent(data.get('name'));
+      const email = encodeURIComponent(data.get('email'));
+      const message = encodeURIComponent(data.get('message'));
+      const subject = encodeURIComponent(`New idea from ${data.get('name')}`);
+      const body = encodeURIComponent(`Name: ${decodeURIComponent(name)}\nEmail: ${decodeURIComponent(email)}\n\nMessage:\n${decodeURIComponent(message)}`);
+      const mailto = `mailto:growwithbro.in@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+      statusEl.textContent = "Opening your email app… If it didn't open, email us at growwithbro.in@gmail.com";
+    });
+  </script>
+  ...
+  <!-- Your other scripts -->
+  
+  <script>
+    window.embeddedChatbotConfig = {
+      chatbotId: "A9lKYSZNQ6P2rq-jMQXlt",
+      domain: "www.chatbase.co"
+    }
+  </script>
+  <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="A9lKYSZNQ6P2rq-jMQXlt"
+    domain="www.chatbase.co"
+    defer>
+  </script>
+</body>
+</html>
+</body>
+</html>
